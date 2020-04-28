@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+    margin: 0;
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    max-width: 1080px;
+    margin:auto;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 12px 25px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: rgb(236, 156, 156);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  .accordion::before {
+      content: '+';
+      display: inline-grid;
+      align-content: center;
+      color: #fff;
+      font-size: 1.2em;
+      background: #000;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 20px;
+      transition: 0.3s ease-in-out;
+  }
+
+  .accordion:active::before {
+    content: '+';
+    transform: rotate(45deg);
+}
+
+
+  .tabs {
+    margin-top: 2em;
+  }
+
+  .tab-link {
+    background: rgb(177, 177, 177);
+    color: #222;
+    padding: 0.8em;
+    margin-right: 15px;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: transparent;
+  }
+
+  .tab-link.current{
+    background-color: #222;
+    color: #fff;
+  }
+
+  .tab-content{
+    display: none;
+    padding: 1em;
+    border: 1px solid #a3a3a3
+  }
+
+  .tab-content.current{
+    display: block;
+  }
+
+.tab-content img {
+  width: 300px;
+}
+
+.header{
+  background: rgb(233, 233, 233);
+  box-shadow: 0px 4px 10px rgba(163, 163, 163, 0.534);
+  position: relative;
+  font-size: 1.3em;
+  z-index: 1;
+  margin-bottom: 2.5em;
+}
+
+.nav-std li {
+  padding: 0 0.5em;
+}
+
+.nav-std a {
+  color: #444;
+  display: inline-block;
+  transition: 0.6s;
+}
+
+.nav-std a:hover {
+  text-decoration: underline;
+}
+
+.sub-menu::after {
+  content: '+';
+  background: rgb(182, 182, 182);
+  color: #fff;
+  font-weight: bold;
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  display: inline-grid;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sub-menu{
+  position: relative;
+}
+
+.sub-menu ul {
+  opacity: 0;
+  position: absolute;
+  left: -10000rem;
+  width: 20rem;
+  background: rgba(43, 43, 43, 0.726);
+  transition: opacity 0.5s;
+}
+
+.sub-menu:hover ul {
+  left: 0;
+  opacity: 1;
+  display:block;
+}
+
+.nav-std button {
+  border: transparent;
+  background: rgb(167, 2, 2);
+  color: #eee;
+  padding: 0.4em;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 2em;
+}
+
+.sub-menu li, 
+.sub-menu li a {
+  width: 100%;
+  color: #fff;
+}
+
+.nav-std button:hover {
+  text-shadow: 3px 3px 15px #fff;
+}
+
+
+
+
